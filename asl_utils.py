@@ -72,7 +72,7 @@ def combine_sequences(split_index_list, sequences):
     sequences_fold = [sequences[idx] for idx in split_index_list]
     X = [item for sublist in sequences_fold for item in sublist]
     lengths = [len(sublist) for sublist in sequences_fold]
-    return X, lengths
+    return np.asarray(X), lengths
 
 
 def putHTML(color, msg):
